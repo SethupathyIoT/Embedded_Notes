@@ -1,0 +1,46 @@
+- Toolchain and Build Process
+  - Cross compilation
+    - Source: The host machine runs the toolchain and creates executable code for the target architecture.
+  - Toolchain components
+    - arm-none-eabi-gcc
+      - Compiler driver and C compilation.
+    - arm-none-eabi-as
+      - Assembler.
+    - arm-none-eabi-ld
+      - Linker.
+    - arm-none-eabi-objcopy
+      - Converts ELF output to formats such as BIN and HEX.
+    - arm-none-eabi-readelf
+      - Inspects ELF headers and sections.
+    - arm-none-eabi-objdump
+      - Disassembles and displays object/executable information.
+  - Build stages
+    - Preprocessing
+      - `.c` → `.i`
+    - Compilation/code generation
+      - `.i` → `.s`
+    - Assembly
+      - `.s` → `.o`
+    - Linking
+      - `.o` files + libraries + linker script → `.elf`
+    - Conversion
+      - `.elf` → `.bin` / `.hex`
+  - Important sections
+    - `.text`
+      - Program instructions.
+    - `.rodata`
+      - Read-only constants.
+    - `.data`
+      - Initialized writable data copied to RAM at startup.
+    - `.bss`
+      - Zero-initialized/uninitialized writable data.
+    - Stack
+      - Runtime call frames and local variables.
+    - Heap
+      - Dynamic allocation area, if used.
+  - Startup responsibilities
+    - Set initial stack pointer.
+    - Copy initialized data from Flash to RAM.
+    - Clear `.bss`.
+    - Configure low-level runtime.
+    - Call `main()`.
