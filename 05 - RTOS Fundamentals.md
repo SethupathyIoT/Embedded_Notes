@@ -1,0 +1,25 @@
+- RTOS Fundamentals
+  - RTOS purpose
+    - Source: Provides structured task execution and timing behavior for embedded systems.
+    - Practical: It does not automatically make code deterministic. Priorities, blocking, interrupt time, and resource sharing still matter.
+  - Real-time requirements
+    - Deadline
+    - Worst-case execution time
+    - Response time
+    - Jitter
+    - Scheduling policy
+  - Task concepts
+    - Task/thread has its own stack and execution context.
+    - Scheduler selects the task that should run.
+    - Context switch saves one task context and restores another.
+  - Cortex-M connection
+    - SysTick can provide periodic scheduling ticks.
+    - PendSV is commonly used for deferred context switching.
+    - PSP is commonly used for task stacks.
+    - MSP is commonly used in handler mode.
+  - Safe task design
+    - Keep ISRs short.
+    - Use queues, semaphores, notifications, or flags to communicate.
+    - Avoid long critical sections.
+    - Measure stack usage.
+    - Define task priorities from timing requirements, not personal preference.
