@@ -1,0 +1,37 @@
+- ARM Cortex-M4
+  - Core overview
+    - Source: 32-bit Arm Cortex-M4 processor core.
+    - Source: Supports DSP instructions and may include an FPU depending on configuration.
+    - Source: Includes NVIC, debug/trace features, and system control functionality.
+  - Important terms
+    - NVIC
+      - Nested Vectored Interrupt Controller.
+      - Handles interrupt enable, priority, pending state, and exception entry.
+    - ISR
+      - Interrupt Service Routine.
+      - Must be short, deterministic, and avoid unnecessary blocking.
+    - MSP
+      - Main Stack Pointer.
+      - Used by handler mode and commonly used after reset.
+    - PSP
+      - Process Stack Pointer.
+      - Commonly used for thread/task stacks in an RTOS.
+    - SysTick
+      - System timer commonly used for periodic ticks and scheduling.
+    - MPU
+      - Memory Protection Unit, when implemented.
+    - FPU
+      - Floating Point Unit, when implemented.
+    - DWT/ITM/ETM
+      - Debug, instrumentation, watchpoint, and trace features.
+    - WFI/WFE
+      - Wait for interrupt / wait for event instructions.
+  - Exception flow
+    - Source: Cortex-M exception entry saves a hardware stack frame.
+    - Source: Return uses an exception-return mechanism encoded in the link register.
+    - Practical: Do not manually modify exception frames unless implementing a carefully tested scheduler or context switch.
+  - RTOS connection
+    - Thread mode executes tasks.
+    - Handler mode executes exceptions and interrupts.
+    - PSP is typically used for task context.
+    - MSP is typically retained for handlers and startup.
