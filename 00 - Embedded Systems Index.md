@@ -1,0 +1,24 @@
+- Embedded Systems Knowledge Base
+  - Purpose
+    - Build reusable notes for embedded C, firmware, microcontrollers, ARM Cortex-M, STM32, communication, RTOS, debugging, and projects.
+  - Learning order
+    - [[01 - Embedded Systems Fundamentals]]
+    - [[04 - Toolchain and Build Process]]
+    - [[02 - ARM Cortex-M4]]
+    - [[03 - STM32F411RE]]
+    - [[06 - Communication and Interfacing]]
+    - [[05 - RTOS Fundamentals]]
+  - Source boundaries
+    - Book-derived information must remain distinguishable from general explanation.
+    - STM32 register addresses, clock limits, pin alternate functions, and peripheral behavior require the STM32F411 reference manual/datasheet.
+    - ARM core behavior requires the Cortex-M4 documentation and Arm architecture references.
+  - Important topics
+    - Embedded C
+    - Processor vs microcontroller vs DSP vs FPGA vs SoC
+    - Memory map and buses
+    - Startup code and linker sections
+    - Interrupts and exception handling
+    - GPIO, timers, PWM, ADC, DMA
+    - UART, SPI, I2C, RS-485
+    - RTOS scheduling and context switching
+    - Debugging and firmware architecture
