@@ -1,0 +1,37 @@
+- Embedded Systems Fundamentals
+  - Embedded system
+    - Source: A system combining hardware and software for a dedicated function.
+    - Practical: Usually constrained by timing, memory, power, cost, reliability, and physical interfaces.
+  - Processor categories
+    - Microprocessor
+      - Source: Generally depends on external memory and peripherals to form a complete system.
+      - Practical: Common in systems requiring larger memory and advanced operating systems.
+    - Microcontroller
+      - Source: Control-oriented device integrating CPU, memory, and peripherals.
+      - Practical: Suitable for low-cost, low-power, real-time control.
+    - DSP
+      - Source: Optimized for mathematical manipulation of digital signals and continuous data streams.
+      - Source: MAC capability is a major DSP feature.
+    - FPGA/CPLD
+      - Source: Programmable logic using logic blocks, I/O blocks, clock routing, and routing resources.
+    - SoC
+      - Source: Integrates multiple system functions and sometimes multiple processor types in one package.
+  - Design flow
+    - Hardware design
+      - Requirements
+      - Processor and package selection
+      - Schematic and PCB design
+      - Simulation, evaluation, and emulation
+    - Software design
+      - Requirements
+      - Architecture
+      - Drivers and middleware
+      - Application code
+      - Build, test, debug, and release
+  - Real-time behavior
+    - Hard real-time
+      - Missing a deadline is a system failure.
+    - Firm real-time
+      - Late result has no value, but occasional misses may be tolerated.
+    - Soft real-time
+      - Late result reduces quality but does not necessarily fail the system.
